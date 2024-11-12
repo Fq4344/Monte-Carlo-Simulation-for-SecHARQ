@@ -5,7 +5,7 @@ close all;
 % L_max=10; n_max=10;
 
 Lambda_U=50;
-Lambda_V=60;
+Lambda_V=50;
 Lambda_R=2*pi;
 
 %% Main
@@ -15,7 +15,7 @@ SE_O1_sim=zeros(10,1); % The total secrecy delivery probability under Option 1
 SU_O2_sim=zeros(10,1); % The total success delivery probability under Option 2
 SE_O2_sim=zeros(10,1); % The total secrecy delivery probability under Option 2
 
-for n=1:6
+for n=1:10
     times=times+1;
     [SU_O1_sim(:,times),SE_O1_sim(:,times)]=Option1_sim(Lambda_V,Lambda_U,Lambda_R,n);
     [SU_O2_sim(:,times),SE_O2_sim(:,times)]=Option2_sim(Lambda_V,Lambda_U,Lambda_R,n);
@@ -39,7 +39,7 @@ else
     xi=1;
 end
 
-times_total=30000;
+times_total=300000;
 success_times_1=0;
 success_times_2=0;
 success_times_3=0;
@@ -249,7 +249,7 @@ else
     xi=1;
 end
 
-times_total=30000;
+times_total=300000;
 success_times_1=0;
 success_times_2=0;
 success_times_3=0;
